@@ -1,4 +1,4 @@
-public class Search_in_Rotated_Sorted_Array {
+public class SearchInRotatedSortedArray {
     public static void main(String[] args) {
         int[] nums = { 4, 5, 6, 7, 0, 1, 2 };
         System.out.println(search(nums, 4));
@@ -35,7 +35,7 @@ public class Search_in_Rotated_Sorted_Array {
             if (mid > start && arr[mid] < arr[mid - 1]) {
                 return mid - 1;
             }
-            if (arr[mid] < arr[start]) {
+            if (arr[mid] <= arr[start]) {
                 end = mid - 1;
             } else {
                 start = mid + 1;
