@@ -53,6 +53,7 @@ public class SearchInRotatedSortedArrayDup {
                     return end - 1;
                 else
                     end--;
+            }
 
                 /*
                  * After skipping duplicates, we are going to check weather the left side array
@@ -64,7 +65,6 @@ public class SearchInRotatedSortedArrayDup {
                     start = mid + 1;
                 else
                     end = mid - 1;
-            }
 
         }
 
