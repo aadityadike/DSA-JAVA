@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class CycleSort {
     /*
-     * This will work for 1-N continues numbers.
+     * This will work for 0-N continues numbers.
      * Time complexity is less than other sorting algorithms. O(n)
      * This will not work for 0 & negative numbers.
      */
