@@ -11,7 +11,7 @@ public class MissingNumber {
         int i = 0;
         // For sorting.
         while (i < nums.length) {
-            if (nums[i] != nums.length && nums[i] != nums[nums[i]]) {
+            if (nums[i] < nums.length && nums[i] != nums[nums[i]]) {
                 swap(nums, i, nums[i]);
             } else {
                 i++;
