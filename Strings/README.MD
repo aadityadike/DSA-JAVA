@@ -2,7 +2,7 @@
 
 If you're new to Java programming, you might wonder why strings are immutable and why we can't modify them. In this blog post, I'll explain the reason in simple terms.
 
-Let's start by understanding what strings are and how they are stored in memory.
+I've written article that make understanding `Strings` so Easy here is link: [Strings in Java](https://adityadike.hashnode.dev/unlocking-javas-string-secret-the-truth-about-immutability)
 
 ## Strings
 
