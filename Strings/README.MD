@@ -81,3 +81,20 @@ In conclusion, strings are immutable in Java to maintain the integrity of the da
     11. %% print a percent sign
     12. \% print a percent sign
 ```
+
+## Addition of Char
+
+`char` is represented as Unicode values and where Unicode values are represented by `\u` followed by `Hexadecimal` values.
+
+As any arithmetic operation on char values promoted to `int` , so the result of `'a' + 'b'` is calculated as
+
+1. Apply the Unicode values on corresponding char using [Unicode Table](http://www.tamasoft.co.jp/en/general-info/unicode.html)
+
+2. Apply the Hexadecimal to Decimal conversion and then perform the operation on [Decimal values](https://www.binaryhexconverter.com/hex-to-decimal-converter).
+
+```java
+    char        Unicode      Decimal
+     a           0061          97
+     b           0062          98  +
+                              195
+```
