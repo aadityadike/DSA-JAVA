@@ -64,3 +64,20 @@ In this example, first, `name` points to `Arima`. Then, in the next line, we cha
 This design offers several advantages, such as making strings thread-safe, ensuring security in certain scenarios, and enabling more efficient memory usage.
 
 In conclusion, strings are immutable in Java to maintain the integrity of the data and ensure a safer programming environment. Understanding this concept will help you write better and more reliable Java programs.
+
+## Format Specifiers
+
+```java
+    1. %c character
+    2. %d decimal (integer) number (base 10)
+    3. %e exponential floating-point number
+    4. %f floating-point number
+    5. %i integer (base 10)
+    6. %o octal number (base 8)
+    7. %s String
+    8. %u unsigned decimal (integer) number
+    9. %x number in hexadecimal (base 16)
+    10. %t formats date/time
+    11. %% print a percent sign
+    12. \% print a percent sign
+```
