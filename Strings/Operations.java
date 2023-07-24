@@ -7,7 +7,15 @@ public class Operations {
          * it into hex value and then it will add and give us a result.
          */
         System.out.println('a' + 'b');
-        System.out.println("a" + "b"); // This will just concat strings.
+        System.out.println((char) 'a' + 4);
+
+        /*
+         * This will just concat strings. Internally this will add "a" and "b" and it
+         * will create new Object and print that Object. Then since it is not being
+         * stored anywhere it will get removed by garbage collection.
+         */
+
+        System.out.println("a" + "b");
 
         // If empty string wasn't there it will give us an error.
         System.out.println(new HashMap<>() + "" + new ArrayList<>());
