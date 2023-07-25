@@ -1,4 +1,4 @@
-public class immutable {
+public class Immutable {
     public static void main(String[] args) {
         String name = "Arima"; // IN heap memory name is poiting towards "Arima".
         name = "Light"; // Now a new Object is created in string pool and name is now pointing "Light"
