@@ -98,3 +98,51 @@ As any arithmetic operation on char values promoted to `int` , so the result of 
      b           0062          98  +
                               195
 ```
+
+## StringBuilder
+
+StringBuilder is a class in Java that is used to efficiently manipulate and build strings. It shares some similarities with the String class but has a crucial difference: it allows modifications without creating new objects. This results in better performance and memory efficiency.
+
+Let's understand this with a simple example:
+
+Consider the following code snippet using the String class:
+
+```java
+public class Test {
+    public static void main(String[] args) {
+        String series = "";
+        for (int i = 0; i < 26; i++) {
+            char ch = (char) ('a' + i);
+            series += ch + " ";
+        }
+
+        System.out.println(series);
+    }
+}
+```
+
+In this code, we are building the 'series' string by adding characters to it in each iteration of the loop. However, using the String class for this approach can lead to two main problems:
+
+1. **Memory and Time Inefficiency:** With each iteration, a new string object is created to hold the updated 'series,' leading to unnecessary memory usage and time consumption.
+
+2. **Quadratic Time Complexity:** Due to the repeated creation of new objects, the time complexity becomes O(n^2), where 'n' is the number of characters in the final series.
+
+To overcome these issues, we use StringBuilder, as demonstrated in the following code:
+
+```java
+public class Stringbuilder {
+    public static void main(String[] args) {
+        StringBuilder series = new StringBuilder();
+        for (int i = 0; i < 26; i++) {
+            char ch = (char) ('a' + i);
+            series.append(ch).append(" ");
+        }
+
+        System.out.println(series.toString());
+    }
+}
+```
+
+In this example, we use StringBuilder to construct the 'series' string. With each iteration, the StringBuilder object appends a new character, avoiding the creation of unnecessary string objects. This significantly improves both time and space efficiency.
+
+By using StringBuilder, we achieve a linear time complexity of O(n) for building the 'series' string, where 'n' is the number of characters in the final series. This makes the code more efficient and scalable compared to using the String class.
