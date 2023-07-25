@@ -3,7 +3,7 @@ import java.util.*;
 public class Operations {
     public static void main(String[] args) {
         /*
-         * This will convert in unicode and perform some Opreations on it like convert
+         * This will convert in unicode and perform some Operations on it, like convert
          * it into hex value and then it will add and give us a result.
          */
         System.out.println('a' + 'b');
