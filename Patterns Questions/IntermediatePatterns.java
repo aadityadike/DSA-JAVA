@@ -48,4 +48,8 @@ public class IntermediatePatterns {
             System.out.println();
         }
     }
+
+    public static void pattern
+
+
 }

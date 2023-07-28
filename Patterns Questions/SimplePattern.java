@@ -5,7 +5,7 @@ public class SimplePattern {
     }
 
     // Star Pattern of Right Angle Triangle.
-    public static void pattern1(int n) {
+    public static void pattern2(int n) {
         // Print Number of Rows.
         for (int rows = 1; rows <= n; rows++) {
             // Print the Number of Column.
@@ -19,7 +19,7 @@ public class SimplePattern {
     }
 
     // Star Pattern of Square Pattern.
-    public static void pattern2(int n) {
+    public static void pattern1(int n) {
         // Print Number of Rows.
         for (int rows = 1; rows <= n; rows++) {
             // Print the Number of Column.
