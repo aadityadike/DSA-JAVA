@@ -1,9 +1,49 @@
+import java.lang.Character;;
+
 public class HardPatterns {
     public static void main(String[] args) {
-        int n = 4;
-        pattern31(n);
+        int n = 5;
+        pattern16(n);
     }
 
+    // Pascal's Triangle:
+    public static void pattern16(int n) {
+        for (int row = 0; row <= n; row++) {
+            // SPACES
+            for (int spaces = n - row; spaces > 0; spaces--) {
+                System.out.print(" ");
+            }
+
+            // Logic
+            int num = 1;
+            for (int col = 0; col <= row; col++) {
+                System.out.print(num + " ");
+                num = num * (row - col) / (col + 1);
+            }
+
+            System.out.println();
+        }
+    }
+
+    public static void pattern33(int n) {
+        char c = 'A';
+        for (int row = 0; row <= n; row++) {
+            for (int col = 0; col <= row; col++) {
+                if (Character.isLowerCase(c)) {
+                    c = Character.toUpperCase(c);
+                } else {
+                    c = Character.toLowerCase(c);
+                }
+
+                System.out.print(c + " ");
+                c = (char) (c + 1);
+            }
+            System.out.println();
+        }
+
+    }
+
+    // Number Triangle with Mirror Image:
     public static void pattern30(int n) {
         // TODO
         for (int row = 1; row <= n; row++) {
