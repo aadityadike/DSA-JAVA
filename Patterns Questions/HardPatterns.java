@@ -25,10 +25,11 @@ public class HardPatterns {
     }
 
     public static void pattern31(int n) {
+        int orignalValueOfN = n;
         n *= 2;
         for (int rows = 0; rows <= n; rows++) {
             for (int cols = 0; cols <= n; cols++) {
-                int min = findMin(rows, cols, n);
+                int min = orignalValueOfN - findMin(rows, cols, n);
                 System.out.print(min + " ");
             }
             System.out.println();
