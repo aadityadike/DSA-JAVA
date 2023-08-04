@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/find-the-duplicate-number/submissions/
+package Questions;// https://leetcode.com/problems/find-the-duplicate-number/submissions/
 
 public class FindDuplicate {
     public static void main(String[] args) {

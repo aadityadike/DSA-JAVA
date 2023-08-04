@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/split-array-largest-sum/
+package Questions;// https://leetcode.com/problems/split-array-largest-sum/
 
 /* 
 * Given an integer array nums and an integer k, split nums into k non-empty subArrays such that the largest sum of any subArray is minimized.

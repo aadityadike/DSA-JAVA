@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/first-missing-positive/description/
+package Questions;// https://leetcode.com/problems/first-missing-positive/description/
 
 public class FirstMissingPositiveNumber {
     public static void main(String[] args) {

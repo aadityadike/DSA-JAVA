@@ -1,3 +1,5 @@
+package Questions;
+
 import java.util.Arrays;
 
 public class BinarySearchIn2DSortedArray {

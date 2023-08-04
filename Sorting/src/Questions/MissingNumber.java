@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/missing-number/description/
+package Questions;// https://leetcode.com/problems/missing-number/description/
 
 public class MissingNumber {
     public static void main(String[] args) {
