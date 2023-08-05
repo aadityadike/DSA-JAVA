@@ -1,6 +1,8 @@
+package Introduction;
+
 public class FibonacciNumber {
     public static void main(String[] args) {
-        int n = 10;
+        int n = 4;
         int ans = findNthFibonacciNo(n);
         System.out.println(ans);
     }
