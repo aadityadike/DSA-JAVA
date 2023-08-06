@@ -2,7 +2,7 @@ package Level1_Questions;
 
 public class SumOfDigits {
     public static void main(String[] args) {
-        int n = 123;
+        int n = 2347;
         int ans = FindSum(n);
         System.out.println(ans);
     }
@@ -11,10 +11,10 @@ public class SumOfDigits {
         int remainder = n % 10;
         int division = n / 10;
 
-        if(division == 0){
-            return 1;
+        if (division == 0) {
+            return n;
         }
 
-        return  FindSum(division) + remainder;
+        return FindSum(division) + remainder;
     }
 }
