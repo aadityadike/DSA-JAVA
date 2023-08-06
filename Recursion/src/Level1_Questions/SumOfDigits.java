@@ -2,7 +2,8 @@ package Level1_Questions;
 
 public class SumOfDigits {
     public static void main(String[] args) {
-        int n = 2347;
+        int n = 2348;
+
         int ans = FindSum(n);
         System.out.println(ans);
     }
