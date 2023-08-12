@@ -2,7 +2,7 @@ package Arrays;
 
 public class SortedOrNot {
     public static void main(String[] args) {
-        int[] arr = {1, 4, 2};
+        int[] arr = {1, 4, 5, 6, 7, 8, 10};
         boolean ans = isSorted(arr);
         System.out.println(ans);
     }
@@ -13,14 +13,9 @@ public class SortedOrNot {
     }
 
     public static boolean helper(int[] arr, int pointer) {
-        if (pointer == arr.length - 1) {
+        if (pointer == arr.length - 1)
             return true;
-        }
 
-        if (arr[pointer] > arr[pointer + 1]) {
-            return false;
-        }
-
-        return helper(arr, pointer + 1);
+        return arr[pointer] < arr[pointer + 1] && helper(arr, pointer + 1);
     }
 }
