@@ -49,7 +49,7 @@ public class SearchInRotatedSortedArray {
 
     static int binarySearch(int[] nums, int target, int start, int end) {
         while (start <= end) {
-            int mid = start + (end - start) / 2; // cause this may surpass the integer value.
+            int mid = start + (end - start) / 2; // because this may surpass the integer value.
 
             if (nums[mid] < target) {
                 start = mid + 1;
