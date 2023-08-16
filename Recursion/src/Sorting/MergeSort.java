@@ -6,7 +6,7 @@ import static Sorting.MergeSortOptimizeVersion.mergeSortOptimizeVersion;
 
 public class MergeSort {
     public static void main(String[] args) {
-        int[] nums = {4, 8, 2, 1, 6, 10};
+        int[] nums = {3, 2, 1, 4};
 //        System.out.println(Arrays.toString(mergeSort(nums)));
         mergeSortOptimizeVersion(nums);
         System.out.println(Arrays.toString(nums));
