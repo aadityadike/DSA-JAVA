@@ -1,7 +1,7 @@
 package Questions;
 
-import java.util.*;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class SearchInRotatedSortedArrayDup {
     public static void main(String[] args) {

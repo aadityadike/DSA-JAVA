@@ -1,6 +1,7 @@
 package Questions;// https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class FindDisappearedNumbers {
     public static void main(String[] args) {
