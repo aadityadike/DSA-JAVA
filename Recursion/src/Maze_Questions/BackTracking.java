@@ -10,7 +10,8 @@ public class BackTracking {
                 {true, true, true},
         };
 
-        System.out.printf("Printing The List of Path Towards the end of Maze: %s \n", allPaths(maze, "", 0, 0));
+//        System.out.printf("Printing The List of Path Towards the end of Maze: %s \n", allPaths(maze, "", 0, 0));
+        printMaze(maze, new int[maze.length][maze[0].length], 0, 0, 1);
     }
 
     public static ArrayList<String> allPaths(Boolean[][] maze, String processed, int row, int col) {
@@ -47,5 +48,44 @@ public class BackTracking {
             maze[row][col] = true;
         }
         return ans;
+    }
+
+    public static void printMaze(Boolean[][] maze, int[][] PrintMaze, int row, int col, int count) {
+        if (row == maze.length - 1 && col == maze[0].length - 1) {
+            for (int[] r : PrintMaze) {
+                for (int c : r) {
+                    System.out.print(c + " ");
+                }
+                System.out.println();
+            }
+            System.out.println();
+            return;
+        }
+
+
+        // THE CELL THAT YOU CURRENTLY AT SHOULD BE TRUE.
+        if (maze[row][col]) {
+            maze[row][col] = false;
+            PrintMaze[row][col] = count;
+            // MOVING TOWARDS RIGHT
+            if (col < maze[0].length - 1) {
+                printMaze(maze, PrintMaze, row, col + 1, count + 1);
+            }
+            // MOVING TOWARDS LEFT
+            if (col > 0) {
+                printMaze(maze, PrintMaze, row, col - 1, count + 1);
+            }
+            // MOVING TOWARDS DOWN
+            if (row < maze.length - 1) {
+                printMaze(maze, PrintMaze, row + 1, col, count + 1);
+            }
+            // MOVING TOWARDS UP
+            if (row > 0) {
+                printMaze(maze, PrintMaze, row - 1, col, count + 1);
+            }
+
+            count = 1;
+            maze[row][col] = true;
+        }
     }
 }
