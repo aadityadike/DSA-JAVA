@@ -1,6 +1,7 @@
 package Maze_Questions;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class BackTracking {
     public static void main(String[] args) {
@@ -52,40 +53,40 @@ public class BackTracking {
 
     public static void printMaze(Boolean[][] maze, int[][] PrintMaze, int row, int col, int count) {
         if (row == maze.length - 1 && col == maze[0].length - 1) {
-            for (int[] r : PrintMaze) {
-                for (int c : r) {
-                    System.out.print(c + " ");
-                }
-                System.out.println();
+            PrintMaze[row][col] = count;
+            for (int[] arr : PrintMaze) {
+                System.out.println(Arrays.toString(arr));
             }
             System.out.println();
             return;
         }
 
 
-        // THE CELL THAT YOU CURRENTLY AT SHOULD BE TRUE.
-        if (maze[row][col]) {
-            maze[row][col] = false;
-            PrintMaze[row][col] = count;
-            // MOVING TOWARDS RIGHT
-            if (col < maze[0].length - 1) {
-                printMaze(maze, PrintMaze, row, col + 1, count + 1);
-            }
-            // MOVING TOWARDS LEFT
-            if (col > 0) {
-                printMaze(maze, PrintMaze, row, col - 1, count + 1);
-            }
-            // MOVING TOWARDS DOWN
-            if (row < maze.length - 1) {
-                printMaze(maze, PrintMaze, row + 1, col, count + 1);
-            }
-            // MOVING TOWARDS UP
-            if (row > 0) {
-                printMaze(maze, PrintMaze, row - 1, col, count + 1);
-            }
-
-            count = 1;
-            maze[row][col] = true;
+        if (!maze[row][col]) {
+            return;
         }
+        // THE CELL THAT YOU CURRENTLY AT SHOULD BE TRUE.
+        maze[row][col] = false;
+        PrintMaze[row][col] = count;
+
+        // MOVING TOWARDS RIGHT
+        if (col < maze[0].length - 1) {
+            printMaze(maze, PrintMaze, row, col + 1, count + 1);
+        }
+        // MOVING TOWARDS LEFT
+        if (col > 0) {
+            printMaze(maze, PrintMaze, row, col - 1, count + 1);
+        }
+        // MOVING TOWARDS DOWN
+        if (row < maze.length - 1) {
+            printMaze(maze, PrintMaze, row + 1, col, count + 1);
+        }
+        // MOVING TOWARDS UP
+        if (row > 0) {
+            printMaze(maze, PrintMaze, row - 1, col, count + 1);
+        }
+
+        maze[row][col] = true;
+        PrintMaze[row][col] = 0;
     }
 }
