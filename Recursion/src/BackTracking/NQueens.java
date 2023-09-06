@@ -4,22 +4,27 @@ public class NQueens {
     public static void main(String[] args) {
         int n = 4;
         boolean[][] board = new boolean[n][n];
-        putQueens(board, 0);
+//        putQueens(board, 0, 0);
+        System.out.printf("The Number of ways to put your Queens on N X N Board: %s", putQueens(board, 0));
     }
 
-    public static void putQueens(boolean[][] board, int row) {
+    public static int putQueens(boolean[][] board, int row) {
         if (row == board.length) {
             PrintBoard(board);
             System.out.println();
-            return;
+            return 1;
         }
+
+        int count = 0;
+
         for (int col = 0; col < board[0].length; col++) {
             if (isSafe(board, row, col)) {
                 board[row][col] = true;
-                putQueens(board, row + 1);
+                count += putQueens(board, row + 1);
                 board[row][col] = false;
             }
         }
+        return count;
     }
 
     public static boolean isSafe(boolean[][] board, int row, int col) {
@@ -55,7 +60,7 @@ public class NQueens {
                 if (element) {
                     System.out.print("Q ");
                 } else {
-                    System.out.print("X ");
+                    System.out.print("* ");
                 }
             }
             System.out.println();
